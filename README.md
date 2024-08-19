@@ -42,11 +42,12 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
+'''
 chanhal singhvi
 c.k.shukla
 s.n.dasgupta
 sumit cchakrobarty
-
+'''
 
 cat < file2
 ## OUTPUT
