@@ -1211,6 +1211,8 @@ fi
 ```
 ## OUTPUT 
 
+![image](https://github.com/user-attachments/assets/97d84ea0-a535-4ec6-b60b-43fae197ea83)
+
 
 # RESULT:
 The Commands are executed successfully.
