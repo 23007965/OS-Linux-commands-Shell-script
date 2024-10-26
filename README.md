@@ -517,14 +517,13 @@ gunzip backup.tar.gz
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
-
 echo 'echo Hello World‘; exit 0 >> my-script.sh
-
-chmod 755 my-script.sh
 ```
+chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-![output](./output1_54.png)
+![image](https://github.com/user-attachments/assets/cb2c2280-e47c-445e-9908-5be8914bccbe)
+
  
 cat << stop > herecheck.txt
 ```
@@ -536,11 +535,11 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-![output](./output1_55.png)
+![image](https://github.com/user-attachments/assets/f2b0b9b0-6e39-4e4c-8910-c9fe422309e9)
+
 
 cat < scriptest.sh 
-```
-bash
+```bash
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -553,11 +552,10 @@ echo 'The $\# is ' $1#
 echo 'The $$ is ' $$
 ps
 ^d
-```
+ ```
 
 cat scriptest.sh 
-```
-bash
+```bash
 \#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
@@ -576,32 +574,36 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![output](./output1_56.png)
+![image](https://github.com/user-attachments/assets/e5b67867-af9b-4a4e-95d4-b4f8d8e78154)
+
  
 ls file1
 ## OUTPUT
-![output](./output1_57.png)
+![image](https://github.com/user-attachments/assets/3f684f83-55f1-46a5-9ccd-1d24b79425cf)
+
 echo $?
 ## OUTPUT 
-![output](./output1_58.png)
+![image](https://github.com/user-attachments/assets/461954b2-9d33-4194-8bf7-7643ec418518)
+
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
-![output](./output1_59.png)
+ ![image](https://github.com/user-attachments/assets/b04ab3a9-9f41-4e1a-a33b-9221fa636b9f)
+
 abcd
  
 echo $?
  ## OUTPUT
-![output](./output1_60.png)
+
+![image](https://github.com/user-attachments/assets/e5b8b012-d83b-4f87-899d-e0191204be26)
 
  
 # mis-using string comparisons
 
 cat < strcomp.sh 
-```
-bash
+```bash
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -615,8 +617,7 @@ fi
 ```
 
 cat strcomp.sh 
-```
-bash
+```bash
 \#!/bin/bash
 val1=baseball
 val2=hockey
@@ -627,20 +628,20 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-## OUTPUT
-![output](./output1_61.png)
+##OUTPUT
+
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-![output](./output1_62.png)
+![image](https://github.com/user-attachments/assets/7c1e85d6-7604-45f7-b571-a84c53f64e7f)
+
 
 # check file ownership
 cat < psswdperm.sh 
-```
-bash
+```bash
 \#!/bin/bash
 if [ -O /etc/passwd ]
 then
@@ -652,8 +653,7 @@ fi
 ```
 
 cat psswdperm.sh 
-```
-bash
+```bash
 /#!/bin/bash
 if [ -O /etc/passwd ]
 then
@@ -661,16 +661,14 @@ echo “You are the owner of the /etc/passwd file”
 else
 echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
-```
- chmod 755 psswdperm.sh
-
+ ```
 ./psswdperm.sh
 ## OUTPUT
-![output](./output1_63.png)
+![image](https://github.com/user-attachments/assets/692ca416-ad6a-4f9a-b381-e5cd2c1f86ae)
+
 # check if with file location
 cat>ifnested.sh 
-```
-bash
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -710,17 +708,16 @@ else
 echo “Sorry, the object does not exist”
 fi
 ```
-chmod 755 ifnested.sh
 
 ./ifnested.sh 
 ## OUTPUT
-![output](./output1_64.png)
+![image](https://github.com/user-attachments/assets/266ab260-5c8c-4788-aafd-ca4d4bbcc5f2)
+
 
 
 # using numeric test comparisons
 cat > iftest.sh 
-```
-bash
+```bash
 \#!/bin/bash
 val1=10
 val2=11
@@ -739,8 +736,7 @@ fi
 
 
 cat iftest.sh 
-```
-bash
+```bash
 \#!/bin/bash
 val1=10
 val2=11
@@ -760,11 +756,11 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ## OUTPUT
-![output](./output1_65.png)
+![image](https://github.com/user-attachments/assets/88d8aebb-d32a-4987-8426-a413022efbb7)
+
 # check if a file
-cat > ifnested.sh
-``` 
-bash
+cat > ifnested.sh 
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -786,8 +782,7 @@ fi
 ```
 
 cat ifnested.sh 
-```
-bash
+```bash
 \#!/bin/bash
 if [ -e $HOME ]
 then
@@ -811,11 +806,11 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ## OUTPUT
-![output](./output1_66.png)
+![image](https://github.com/user-attachments/assets/d510b40b-1461-4b10-ba36-0ad953c1e922)
+
 # looking for a possible value using elif
 cat elifcheck.sh 
-```
-bash
+```bash
 \#!/bin/bash
 if [ $USER = Ram ]
 then
@@ -840,12 +835,12 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-![output](./output1_67.png)
+![image](https://github.com/user-attachments/assets/603e8764-d92e-4264-b9a7-0ad9c297ed88)
+
 
 # testing compound comparisons
 cat> ifcompound.sh 
-```
-bash
+```bash
 \#!/bin/bash
 if [ -d $HOME ] && [ -w $HOME ]
 then
@@ -855,31 +850,33 @@ echo "I cannot write to the file"
 fi
 ```
 $ chmod 755 ifcompound.sh
-
 $ ./ifcompound.sh 
 ## OUTPUT
-![output](./output1_68.png)
+![image](https://github.com/user-attachments/assets/ac9556b9-5b7b-4419-9000-511e33393da2)
+
 # using the case command
 cat >casecheck.sh 
-```
-bash
-case $USER in Ram | Robert)
+```bash
+case $USER in
+Ram | Robert)
 echo "Welcome, $USER"
-echo "Please enjoy your visit";Rahim)
-echo "Special testing account";gganesh)
-echo "$USER, Do not forget to log off when you're done";*)
+echo "Please enjoy your visit";;
+Rahim)
+echo "Special testing account";;
+gganesh)
+echo "$USER, Do not forget to log off when you're done";;
+*)
 echo "Sorry, you are not allowed here";;
 esac
 ```
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
-## OUTPUT
-![output](./output1_69.png)
+ ## output
+ ![image](https://github.com/user-attachments/assets/5a290371-a1f2-4fb1-b617-2bc60838f53a)
 
-cat > whiletest.sh
-```
-bash
+cat > whiletest
+```bash
 #!/bin/bash
 #while command test
 var1=10
@@ -892,12 +889,13 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
-## OUTPUT
-![output](./output1_70.png)
  
-cat > untiltest.sh 
-```
-bash
+## output
+![image](https://github.com/user-attachments/assets/5cc4d37a-4158-45aa-a03f-44a315a0c4bd)
+
+
+cat untiltest.sh 
+```bash
 \#using the until command
 var1=100
 until [ $var1 -eq 0 ]
@@ -905,44 +903,45 @@ do
 echo $var1
 var1=$[ $var1 - 25 ]
 done
-```
+``` 
 $ chmod 755 untiltest.sh
-
-$ ./untiltest.sh
+ 
  ## OUTPUT
- ![output](./output1_71.png)
+ ![image](https://github.com/user-attachments/assets/db18c0c5-9081-4386-a68c-9c355ce51351)
+
+ 
 cat forin1.sh 
-```
-bash
+```bash
 \#!/bin/bash
 \#basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
 done
-```
+ ```
  
 $ chmod 755 forin1.sh
+ $ ./forin2.sh
+ ## OUTPUT
+ ![image](https://github.com/user-attachments/assets/8d237417-b633-4e4a-9ef5-d3352833d603)
 
-$ ./forin1.sh
-## OUTPUT
-![output](./output1_72.png)
-cat forin2.sh
-``` 
-bash
+cat forin2.sh 
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don't know if this'll work
 do
 echo “word:$test”
 done
-```
+ ```
  
 $ chmod 755 forin2.sh
- 
+ $ ./forin3.sh
+ ## OUTPUT
+ ![image](https://github.com/user-attachments/assets/a758bb78-275a-4dbd-af4f-1466f7d065d9)
+
 cat forin2.sh 
-```
-bash
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don't know if this'll work
@@ -953,11 +952,9 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
-## OUTPUT
-![output](./output1_73.png)
+ 
 cat forin3.sh 
-```
-bash
+```bash
 \#!/bin/bash
 \# another example of how not to use the for command
 for test in I don\'t know if "this'll" work
@@ -966,12 +963,9 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
-## OUTPUT
-![output](./output1_74.png)
-
+ 
 cat forin1.sh 
-```
-bash
+```bash
 #!/bin/bash
 # basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
@@ -981,9 +975,9 @@ done
 ```
 $ chmod 755 forin1.sh
 
+
 cat forinfile.sh 
-```
-bash
+```bash
 #!/bin/bash
 # reading values from a file
 file="cities"
@@ -993,7 +987,6 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-
 $ cat cities
 ```
 Hyderabad
@@ -1004,26 +997,26 @@ Adilabad
 Bhadrachalam
 Khammam
 ```
+
+
+
+
 cat forctype.sh 
-```
-bash
+```bash
 #!/bin/bash
 # testing the C-style for loop
 for (( i=1; i <= 5; i++ ))
 do
 echo "The value of i is $i"
 done
-```
+````
 $ chmod 755 forctype.sh
-
 $ ./forctype.sh 
-
 ## OUTPUT
-![output](./output1_75.png)
+![image](https://github.com/user-attachments/assets/a5b30984-08a4-44e8-9208-20105171a0c3)
 
 cat forctype1.sh 
-```
-bash
+```bash
 #!/bin/bash
 # multiple variables
 for (( a=1, b=5; a <= 5; a++, b-- ))
@@ -1032,15 +1025,12 @@ echo "$a - $b"
 done
 ```
 $ chmod 755 forctype.sh
-
-$ ./forctype1.sh
-
+$ ./forctype1.sh 
 ## OUTPUT
-![output](./output1_76.png)
+![image](https://github.com/user-attachments/assets/28a50bca-a0f9-48b4-8e32-736a52421e50)
 
-cat fornested1.sh
-``` 
-bash
+cat fornested1.sh 
+```bash
 #!/bin/bash
 # nesting for loops
 for (( a = 1; a <= 3; a++ ))
@@ -1056,11 +1046,11 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-![output](./output1_77.png)
+![image](https://github.com/user-attachments/assets/f0959f28-d0ea-4596-af33-ce9ee42c98bd)
+
  
 cat forbreak.sh 
-```
-bash
+```bash
 #!/bin/bash
 # breaking out of a for loop
 for var1 in 1 2 3 4 5
@@ -1077,12 +1067,11 @@ echo "The for loop is completed“
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
-## OUTPUT
-![output](./output1_78.png)
+ ## OUTPUT
+![image](https://github.com/user-attachments/assets/2b9ff9eb-c421-43f7-be17-80534ae70235)
 
-cat forbreak.sh
-``` 
-bash
+cat forbreak.sh 
+```bash
 #!/bin/bash
 # breaking out of a for loop
 for var1 in 1 2 3 4 5
@@ -1100,42 +1089,47 @@ echo "The for loop is completed“
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
+
  
 cat exread.sh 
-```
-bash
+## OUTPUT
+![image](https://github.com/user-attachments/assets/7e0a5401-2cf3-4890-9a6b-28f68bab86d4)
+
+```bash
+
 #!/bin/bash
 # testing the read command
 echo -n "Enter your name: "
 read name
 echo "Hello $name, welcome to my program. "
-```
+ ```
  
 $ chmod 755 exread.sh 
  
 $ ./exread.sh 
 ## OUTPUT
-![output](./output1_79.png)
+![image](https://github.com/user-attachments/assets/bc316ef4-2b6c-4eac-8cb4-62f1cd22b96e)
+
 
  cat exread1.sh
-```
-bash
+```bash
 #!/bin/bash
 # testing the read command
-echo -n "Enter your name: "
-read name
-echo "Hello $name, welcome to my program."
-```
+read -p "Enter your name: " name
+echo "Hello $name, welcome to my program. “
+``` 
 $ chmod 755 exread1.sh 
 
-$ ./exread1.sh
-## OUTPUT
-![output](./output1_80.png)
 
- 
+
+
+
+$ ./exread1.sh 
+## OUTPUT
+ ![image](https://github.com/user-attachments/assets/0058d1db-7642-4214-b403-2feda95c8ec3)
+
 cat funcex.sh
-```
-bash
+```bash
 #!/bin/bash
 # trying to access script parameters inside a function
 function func {
@@ -1149,20 +1143,20 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
- ./funcex.sh 
+./funcex.sh
+## OUTPUT
+![image](https://github.com/user-attachments/assets/a64e3dea-a0b2-4ef6-87dc-ce5586af343d)
 
- ## OUTPUT
-![output](./output1_81.png)
+ 
 
  
  ./funcex.sh 1 2
+ ## OUTPUT
+![image](https://github.com/user-attachments/assets/ed654d0b-6131-4054-9315-07658e9fbd95)
 
-## OUTPUT
-![output](./output1_82.png)
  
 cat argshift.sh
-```
-bash
+```bash
 #!/bin/bash 
  while (( "$#" )); do 
   echo $1 
@@ -1171,13 +1165,13 @@ done
 ```
 $ chmod 777 argshift.sh
 
-$ ./argshift.sh 1 2 3
 ## OUTPUT
-![output](./output1_83.png)
+![image](https://github.com/user-attachments/assets/496372ba-f016-4811-b096-d4c8346fe431)
 
+$ ./argshift.sh 1 2 3
+ 
  cat argshift1.sh
-```
-bash
+```bash
  #/bin/bash 
  # store arguments in a special array 
 args=("$@") 
@@ -1190,14 +1184,13 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
+## OUTPUT
+![image](https://github.com/user-attachments/assets/5a87aa69-a179-43b9-bcd7-ef646c9cefef)
 
 $ ./argshift.sh 1 2 3
-## OUTPUT
-![output](./output1_84.png)
-
+ 
 cat argshift.sh
-```
-bash
+```bash
 #!/bin/bash 
 set -x 
 while (( "$#" )); do 
@@ -1208,12 +1201,12 @@ set +x
 ```
 
  ./argshift.sh 1 2 3
-## OUTPUT 
- ![output](./output1_85.png)
+ ## OUTPUT
+ ![image](https://github.com/user-attachments/assets/948324ae-43c7-49d1-8e2e-bd3f62323c32)
 
+ 
 cat > nc.awk
-```
-bash
+```bash
 BEGIN{}
 {
 print len=length($0),"\t",$0 
@@ -1225,10 +1218,9 @@ print "total characters",chrcnt
 print "Number of Lines are",NR
 print "No of Words count:",wordcount
 }
-```
+ ```
 cat>data.dat
-```
-bash
+```bash
 bcdfghj
 abcdfghj
 bcdfghj
@@ -1242,11 +1234,10 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- ![output](./output1_86.png)
+ ![image](https://github.com/user-attachments/assets/5a974231-3dca-4896-a728-9f7c2df00e26)
 
 cat > palindrome.sh
-```
-bash
+```bash
 #num=545
 echo "Enter the number"
 read num
@@ -1270,12 +1261,9 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
-
-chmod 755 palindrome.sh
-
-./palindrome.sh
 ## OUTPUT 
-![output](./output1_87.png)
+![image](https://github.com/user-attachments/assets/715391d3-abad-4f7b-905f-e2b063b2bca0)
+
 
 # RESULT:
 The Commands are executed successfully.
