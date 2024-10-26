@@ -515,13 +515,13 @@ gunzip backup.tar.gz
 
  
 # Shell Script
-
+```
 echo '#!/bin/sh' > my-script.sh
 
 echo 'echo Hello World‘; exit 0 >> my-script.sh
 
 chmod 755 my-script.sh
-
+```
 ./my-script.sh
 ## OUTPUT
 ![output](./output1_54.png)
@@ -1276,7 +1276,6 @@ chmod 755 palindrome.sh
 ./palindrome.sh
 ## OUTPUT 
 ![output](./output1_87.png)
-
 
 # RESULT:
 The Commands are executed successfully.
